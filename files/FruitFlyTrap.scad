@@ -15,7 +15,7 @@ lid_inner_height = 0;
 lid_bump_count = 0;
 wall_thickness = 0.8;
 cone_height = 20;
-cone_hole_diameter = 1.5;
+cone_hole_diameter = 3;
 cone_wide_diameter = 30;
 
 /* [Hidden] */
