@@ -6,14 +6,14 @@
 
 /* [Basic parameters] */
 // (inner diameter of lid - outer diameter of the jar)
-lid_inner_diameter = 50.5;
+lid_inner_diameter = 64;
 // (inner height of lid - 0 for no rim)
 lid_inner_height = 0;
 
 /* [Advanced] */
 // (number of bumps/knurls along the perimerer, 0 to smooth edge)
-lid_bump_count = 64;
-wall_thickness = 1.6;
+lid_bump_count = 0;
+wall_thickness = 0.8;
 cone_height = 20;
 cone_hole_diameter = 1.5;
 cone_wide_diameter = 30;
