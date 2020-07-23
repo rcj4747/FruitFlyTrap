@@ -7,8 +7,8 @@
 /* [Basic parameters] */
 // (inner diameter of lid - outer diameter of the jar)
 lid_inner_diameter = 50.5;
-// (inner height of lid)
-lid_inner_height = 10;
+// (inner height of lid - 0 for no rim)
+lid_inner_height = 0;
 
 /* [Advanced] */
 // (number of bumps/knurls along the perimerer, 0 to smooth edge)
@@ -37,7 +37,9 @@ difference() {
                     }
                 }
             }
-            translate([0, 0, wall_thickness]) cylinder(d = lid_inner_diameter, h = lid_outer_height);
+            if(lid_inner_height > 0) {
+                translate([0, 0, wall_thickness]) cylinder(d = lid_inner_diameter, h = lid_outer_height);
+            }
         }
         // Cone
         translate([0, 0, wall_thickness]) cylinder(d1 = cone_wide_diameter, d2 = cone_hole_diameter, h = cone_height);
