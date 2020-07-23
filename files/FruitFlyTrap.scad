@@ -2,6 +2,8 @@
 ** FRUIT FLY TRAP GENERATOR version 1.0.0 (2018-12-01) **
 ** Copyright (c) Michal A. Valasek, 2018, CC-BY-NC-SA  **
 **               www.rider.cz | www.altair.blog        **
+** Copyright (c) Robert C. Jennings, 2020, CC-BY-NC-SA **
+**               github.com/rcj4747                    **
 ********************************************************/
 
 /* [Basic parameters] */
