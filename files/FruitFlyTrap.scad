@@ -14,9 +14,10 @@ lid_inner_height = 0;
 // (number of bumps/knurls along the perimerer, 0 to smooth edge)
 lid_bump_count = 0;
 wall_thickness = 0.8;
+cone_count = 5;
 cone_height = 20;
 cone_hole_diameter = 3;
-cone_wide_diameter = 30;
+cone_wide_diameter = 18;
 
 /* [Hidden] */
 lid_outer_diameter = lid_inner_diameter + 2 * wall_thickness;
@@ -42,9 +43,16 @@ difference() {
             }
         }
         // Cone
-        translate([0, 0, wall_thickness]) cylinder(d1 = cone_wide_diameter, d2 = cone_hole_diameter, h = cone_height);
+        for(i = [0:cone_count]) {
+            rotate(360 / cone_count * i) translate([lid_outer_diameter / 4 - wall_thickness / 2, 0, 0])
+                translate([0, 0, wall_thickness]) cylinder(d1 = cone_wide_diameter, d2 = cone_hole_diameter, h = cone_height);
+        }
     }
     // Cone hole
-    translate([0, 0, -fudge]) cylinder(d = cone_hole_diameter, h = cone_height + wall_thickness + 2 * fudge);
-    translate([0, 0, -wall_thickness]) cylinder(d1 = cone_wide_diameter, d2 = cone_hole_diameter, h = cone_height);
+    for(i = [0:cone_count]) {
+        rotate(360 / cone_count * i) translate([lid_outer_diameter / 4 - wall_thickness / 2, 0, 0])
+            translate([0, 0, -fudge]) cylinder(d = cone_hole_diameter, h = cone_height + wall_thickness + 2 * fudge);
+        rotate(360 / cone_count * i) translate([lid_outer_diameter / 4 - wall_thickness / 2, 0, 0])
+            translate([0, 0, -wall_thickness]) cylinder(d1 = cone_wide_diameter, d2 = cone_hole_diameter, h = cone_height);
+    }
 }
