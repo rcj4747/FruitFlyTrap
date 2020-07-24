@@ -1,4 +1,6 @@
-Parametric Customizable Fruit Fly Trap (Small Jar) by rcj4747 on Thingiverse: https://www.thingiverse.com/thing:4548675
+Parametric Customizable Fruit Fly Trap (Small Jar) by rcj4747 on
+ Thingiverse: https://www.thingiverse.com/thing:4548675
+ GitHub: https://github.com/rcj4747/FruitFlyTrap
 
   Remix of Parametric Customizable Fruit Fly Trap by ridercz (http://www.thingiverse.com/thing:3251278)
 
